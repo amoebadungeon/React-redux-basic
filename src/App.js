@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import CounterToy from './component/test-redux'
+import {Provider} from 'react-redux'
+import store  from './component/redux/store';
 
 function App() {
   return (
@@ -9,6 +12,10 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Provider store={store}>
+        <CounterToy></CounterToy>
+        </Provider>
+      
         <a
           className="App-link"
           href="https://reactjs.org"
