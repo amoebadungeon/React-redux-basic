@@ -3,14 +3,14 @@ import { createLogger } from 'redux-logger'; // Import Redux Logger
 
 // Define the initial state for the counter
 const initialState = {
-  counter: { value: 0 },
+  value: 0,
 };
 
 // Define a reducer function to handle state changes
 const counterIncrement = (state = initialState, action) => {
   switch (action.type) {
     case "INCREMENT":
-      return { ...state, counter: { value: state.counter.value + 1 } };
+      return { ...state, value: state.value + 1 };
 
     default:
       return state;
